@@ -18,13 +18,6 @@
    </license>
 
    <plugin
-         id="com.vogella.jpa.e4.client"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="com.vogella.jpa.model"
          download-size="0"
          install-size="0"
@@ -33,6 +26,13 @@
 
    <plugin
          id="com.vogella.jpa.service"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.vogella.jpa.standalone"
          download-size="0"
          install-size="0"
          version="0.0.0"

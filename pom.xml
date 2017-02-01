@@ -12,12 +12,12 @@
 	</properties>
 
 	<modules>
-		<module>com.vogella.jpa.e4.client</module>
 		<module>com.vogella.jpa.feature</module>
 		<module>com.vogella.jpa.model</module>
 		<module>com.vogella.jpa.product</module>
 		<module>com.vogella.jpa.service</module>
 		<module>com.vogella.jpa.target</module>
+		<module>com.vogella.jpa.standalone</module>
 	</modules>
 
 	<build>
@@ -49,7 +49,7 @@
 							<version>1.0.0-SNAPSHOT</version>
 						</artifact>
 					</target>
-					<environments>
+					<!--environments>
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
@@ -75,7 +75,7 @@
 							<ws>cocoa</ws>
 							<arch>x86_64</arch>
 						</environment>
-					</environments>
+					</environments-->
 				</configuration>
 			</plugin>
 			<!-- enable source feature generation -->
