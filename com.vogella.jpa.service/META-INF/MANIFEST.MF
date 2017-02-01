@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Service
+Bundle-SymbolicName: com.vogella.jpa.service
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: VOGELLA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.vogella.jpa.model,
+ org.osgi.service.component.annotations;version="1.2.0";resolution:=optional
+Service-Component: OSGI-INF/com.vogella.jpa.service.TodoServiceImpl.xml
+Bundle-ActivationPolicy: lazy
+Require-Bundle: javax.persistence;bundle-version="2.1.1",
+ org.eclipse.persistence.jpa;bundle-version="2.6.4"
+Bundle-ClassPath: lib/h2-1.4.193.jar,
+ .
