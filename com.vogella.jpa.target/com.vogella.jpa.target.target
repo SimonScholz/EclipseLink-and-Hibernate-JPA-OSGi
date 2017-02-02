@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="com.vogella.jpa.target" sequenceNumber="3">
+<?pde version="3.8"?><target name="com.vogella.jpa.target" sequenceNumber="4">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.persistence.sdk.feature.group" version="2.6.4.v20160829-44060b6"/>
@@ -9,6 +9,10 @@
 <unit id="org.eclipse.equinox.sdk.feature.group" version="3.12.0.v20161122-1740"/>
 <unit id="org.eclipse.sdk.ide" version="4.6.2.M20161124-1400"/>
 <repository location="http://download.eclipse.org/eclipse/updates/4.6"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="H2-Database-Engine.feature.group" version="1.4.193"/>
+<repository location="https://dl.bintray.com/simon-scholz/H2-Database-Engine/"/>
 </location>
 </locations>
 </target>

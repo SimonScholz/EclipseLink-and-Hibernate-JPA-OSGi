@@ -11,5 +11,4 @@ Service-Component: OSGI-INF/com.vogella.jpa.service.TodoServiceImpl.xml
 Bundle-ActivationPolicy: lazy
 Require-Bundle: javax.persistence;bundle-version="2.1.1",
  org.eclipse.persistence.jpa;bundle-version="2.6.4"
-Bundle-ClassPath: lib/h2-1.4.193.jar,
- .
+Bundle-ClassPath: .
