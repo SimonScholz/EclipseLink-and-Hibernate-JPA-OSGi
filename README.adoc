@@ -16,17 +16,22 @@ After the successful build you can navigate to either the _/home/simon/git/com.v
 
 == Architecture
 
-The _com.vogella.jpa.e4.client_ bundle, which contains the Eclipse 4 application and inplicitly uses EclipseLink or Hibernate is completely decoupled from the underlying ORM mapper.
+The _com.vogella.jpa.e4.client_ bundle, which contains the Eclipse 4 application and implicitly uses EclipseLink or Hibernate is completely decoupled from the underlying ORM mapper.
 
 image::./docs/jpa-osgi-architecture.png[]
 
 == Hibernate vs. EclipseLink
 
-I do not want to compare these two JPA implementations, but just mention that it is easier to include EclipseLink into a project, which uses an OSGi Runtime, e.g., Eclipse, because for Hibernate it was still necessary to add the `Eclipse-BuddyPolicy: registered` instrcution in the models _MANIFEST.MF_ file and to register the _com.vogella.jpa.service.eclipselink_ project as buddy (`Eclipse-RegisterBuddy: com.vogella.jpa.model`).
+I do not want to compare these two JPA implementations, but just mention that it is easier to include EclipseLink into a project, which uses an OSGi runtime, e.g., Eclipse, because for Hibernate it was still necessary to add the `Eclipse-BuddyPolicy: registered` instruction in the models _MANIFEST.MF_ file and to register the _com.vogella.jpa.service.eclipselink_ project as buddy (`Eclipse-RegisterBuddy: com.vogella.jpa.model`).
 
 TIP
 ====
 See https://wiki.eclipse.org/Context_Class_Loader_Enhancements for further information.
 ====
 
+== Contributing
+
+Feedback is highly appreciated and pull requests are appreciated even more.
+
+So please feel free to ask for enhancements or offer pull requests for missing features.
 
