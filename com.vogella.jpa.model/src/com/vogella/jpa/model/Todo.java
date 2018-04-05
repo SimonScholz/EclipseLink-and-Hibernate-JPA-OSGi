@@ -28,6 +28,11 @@ public class Todo {
 		this.description = description;
 	}
 
+	public Todo(String summary, String description) {
+		this.summary = summary;
+		this.description = description;
+	}
+
 	public int getId() {
 		return id;
 	}
