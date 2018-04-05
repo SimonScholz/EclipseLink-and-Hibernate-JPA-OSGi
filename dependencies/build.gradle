@@ -1,0 +1,58 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	    maven {
+      		url 'http://oss.sonatype.org/content/repositories/snapshots/'
+    	}
+	}
+	dependencies {
+		classpath 'org.standardout:bnd-platform:1.6.0-SNAPSHOT'
+	}
+}
+
+apply plugin: 'org.standardout.bnd-platform'
+
+repositories {
+	jcenter()
+}
+
+platform {
+	// configure proper names for the p2 update site
+	categoryId = 'vogella-jpa-libs'
+	categoryName = 'vogella jpa libs'
+
+	featureId = 'vogella-jpa-libs'
+	featureName = 'vogella jpa libs'
+	featureVersion = '0.1.0.'
+	featureProvider = 'Simon Shcolz'
+
+	defaultQualifier = ''
+	useBndHashQualifiers = false
+	useFeatureHashQualifiers = false
+	defaultQualifierMap.prefix = ''
+
+	feature(id: 'hibernate-osgi', name: 'hibernate-osgi', version: '5.2.16.Final') {
+		plugin('org.hibernate:hibernate-osgi:5.2.16.Final')
+		plugin('dom4j:dom4j:1.6.1') {
+			bnd {
+				optionalImport 'com.sun.msv.datatype'
+				optionalImport 'com.sun.msv.datatype.xsd'
+				optionalImport 'org.gjt.xpp'
+				optionalImport 'org.jaxen'
+				optionalImport 'org.jaxen.dom4j'
+				optionalImport 'org.jaxen.pattern'
+				optionalImport 'org.jaxen.saxpath'
+				optionalImport 'org.relaxng.datatype'
+				optionalImport 'org.xmlpull.v1'
+			}
+		}
+	}
+
+	feature(id: 'h2', name: 'h2', version: '1.4.197') {
+		plugin('com.h2database:h2:1.4.197')
+	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '4.6'
+}
