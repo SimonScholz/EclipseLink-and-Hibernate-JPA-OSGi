@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activateComponent" deactivate="deactivateComponent" name="com.vogella.jpa.service.hibernate.HibernateTodoService">
+   <property name="osgi.command.scope" value="test"/>
+   <property name="osgi.command.function" value="printTodos"/>
+   <service>
+      <provide interface="com.vogella.jpa.model.TodoService"/>
+   </service>
+   <implementation class="com.vogella.jpa.service.hibernate.HibernateTodoService"/>
+</scr:component>
