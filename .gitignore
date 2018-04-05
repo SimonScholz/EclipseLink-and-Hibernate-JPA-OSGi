@@ -1,5 +1,9 @@
-target/
 *~
 .class
 .metadata
 bin/
+
+**/bin
+**/target
+**/build/
+**/.gradle/*
