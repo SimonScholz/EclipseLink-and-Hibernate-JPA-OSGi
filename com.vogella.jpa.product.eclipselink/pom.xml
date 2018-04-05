@@ -6,7 +6,7 @@
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
     
-	<artifactId>com.vogella.jpa.product</artifactId>
+	<artifactId>com.vogella.jpa.product.eclipselink</artifactId>
 	<packaging>eclipse-repository</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 
@@ -41,8 +41,8 @@
 				<configuration>
 					<products>
 						<product>
-							<id>vogella-jpa</id>
-							<rootFolder>vogella-jpa</rootFolder>
+							<id>vogella-jpa-eclipselink</id>
+							<rootFolder>vogella-jpa-eclipselink</rootFolder>
 						</product>
 					</products>
 				</configuration>
