@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.vogella.jpa.feature"
-      label="Feature"
-      version="1.0.0.qualifier"
+      id="com.vogella.jpa.feature.eclipselink"
+      label="Eclipse Link Feature"
+      version="1.0.0"
       provider-name="VOGELLA">
 
    <description url="http://www.example.com/description">
@@ -32,14 +32,7 @@
          unpack="false"/>
 
    <plugin
-         id="com.vogella.jpa.service"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.h2"
+         id="com.vogella.jpa.service.eclipselink"
          download-size="0"
          install-size="0"
          version="0.0.0"

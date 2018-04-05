@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Service
-Bundle-SymbolicName: com.vogella.jpa.service
+Bundle-SymbolicName: com.vogella.jpa.service.eclipselink
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: VOGELLA
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

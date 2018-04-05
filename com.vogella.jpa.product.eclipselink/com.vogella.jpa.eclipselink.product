@@ -103,8 +103,9 @@
       <feature id="org.eclipse.e4.rcp"/>
       <feature id="org.eclipse.emf.ecore"/>
       <feature id="org.eclipse.emf.common"/>
-      <feature id="com.vogella.jpa.feature"/>
+      <feature id="h2"/>
       <feature id="org.eclipse.persistence.jpa"/>
+      <feature id="com.vogella.jpa.feature.eclipselink"/>
    </features>
 
    <configurations>

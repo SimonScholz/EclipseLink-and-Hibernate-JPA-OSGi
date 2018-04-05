@@ -13,10 +13,10 @@
 
 	<modules>
 		<module>com.vogella.jpa.e4.client</module>
-		<module>com.vogella.jpa.feature</module>
+		<module>com.vogella.jpa.feature.eclipselink</module>
 		<module>com.vogella.jpa.model</module>
-		<module>com.vogella.jpa.product</module>
-		<module>com.vogella.jpa.service</module>
+		<module>com.vogella.jpa.product.eclipselink</module>
+		<module>com.vogella.jpa.service.eclipselink</module>
 		<module>com.vogella.jpa.target</module>
 	</modules>
 

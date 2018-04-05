@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>com.vogella.jpa.service</name>
+	<name>com.vogella.jpa.service.eclipselink</name>
 	<comment></comment>
 	<projects>
 	</projects>
