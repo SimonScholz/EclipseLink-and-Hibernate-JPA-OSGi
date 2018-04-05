@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="com.vogella.jpa.product" uid="vogella-jpa-hibernate" id="com.vogella.jpa.e4.client.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="com.vogella.jpa.product" uid="vogella-jpa-hibernate" id="com.vogella.jpa.e4.client.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -15,7 +15,7 @@
 
    <windowImages/>
 
-   <launcher>
+   <launcher name="vogella-jpa-hibernate">
       <win useIco="false">
          <bmp/>
       </win>
