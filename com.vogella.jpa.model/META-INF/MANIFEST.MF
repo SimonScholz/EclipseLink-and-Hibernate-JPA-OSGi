@@ -1,9 +1,11 @@
 Manifest-Version: 1.0
+Eclipse-BuddyPolicy: registered
 Bundle-ManifestVersion: 2
 Bundle-Name: Model
 Bundle-SymbolicName: com.vogella.jpa.model
+Automatic-Module-Name: com.vogella.jpa.model
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: VOGELLA
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: javax.persistence;bundle-version="2.1.1"
 Export-Package: com.vogella.jpa.model
+Import-Package: javax.persistence
