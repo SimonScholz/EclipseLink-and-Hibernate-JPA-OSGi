@@ -18,3 +18,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: com.vogella.jpa.model,
  javax.annotation;version="1.0.0";resolution:=optional,
  javax.inject;version="1.0.0"
+Automatic-Module-Name: com.vogella.jpa.e4.client
