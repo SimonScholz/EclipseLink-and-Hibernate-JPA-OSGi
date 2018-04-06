@@ -24,14 +24,52 @@ image::./docs/jpa-osgi-architecture.png[]
 
 I do not want to compare these two JPA implementations, but just mention that it is easier to include EclipseLink into a project, which uses an OSGi runtime, e.g., Eclipse, because for Hibernate it was still necessary to add the `Eclipse-BuddyPolicy: registered` instruction in the models _MANIFEST.MF_ file and to register the _com.vogella.jpa.service.eclipselink_ project as buddy (`Eclipse-RegisterBuddy: com.vogella.jpa.model`).
 
-TIP
-====
-See https://wiki.eclipse.org/Context_Class_Loader_Enhancements for further information.
-====
+TIP: See https://wiki.eclipse.org/Context_Class_Loader_Enhancements for further information.
+
+Another point is that EclipseLink provides their OSGi bundles in a p2 update site (http://download.eclipse.org/rt/eclipselink/updates/) and Hibernate had to be added to the dependencies project, which generates a p2 update site. See <<dependencies-project>> for further information.
+
+== Development
+
+Building the project with Maven Tycho is nice, but as a developer you might want to see the code und run it from the Eclipse IDE. Therefore just clone and import the project, set the target platform, which is specified in the _com.vogella.jpa.target_ project, and run the _com.vogella.jpa.eclipselink.product_ product *or* the _com.vogella.jpa.hibernate.product_ product.
+
+== The Projects
+
+[[dependencies-project]]
+=== dependencies
+
+The dependencies projects uses https://github.com/stempler/bnd-platform[bnd-platform] in order to generate a p2 update site for the H2 database and the Hibernate hibernate dependencies.
+See https://github.com/SimonScholz/com.vogella.jpa/blob/master/dependencies/build.gradle[build.gradle] and https://github.com/stempler/bnd-platform/blob/master/README.md[bnd-platforms documentation] to see how this is done.
+
+But no worries the p2 update site, which is generated is already available here: https://dl.bintray.com/simon-scholz/H2-Database-Engine/ and also being used in the target platform definition file.
+
+=== com.vogella.jpa.target
+
+This project consists of a _com.vogella.jpa.target.target_ target definition file, which should be set as target platform for the workspace so that all projects compile.
+
+=== com.vogella.jpa.model
+
+This is a simple data model for the clients containing a `Todo` entity and an `TodoService` interface, but completely decoupled from EclipseLink or Hibernate. So it is pretty much like a DAO or a Spring data repository.
+
+=== com.vogella.jpa.service.eclipselink and com.vogella.jpa.service.hibernate
+
+Implement the `TodoService` interface and registers this implementation as an OSGi service so that it can the obtained by clients.
+
+Depending on which product is started com.vogella.jpa.service.eclipselink *or* com.vogella.jpa.service.hibernate will be part of the product and therefore provide the actual implementation of the `TodoService`.
+
+=== com.vogella.jpa.e4.client
+
+This client is an Eclipse 4 RCP application, which only has a dependency to the _com.vogella.jpa.model_ package and simply injects the `TodoService` into a sample part in order to show `Todo` objects in a sample part.
+
+Please feel free to add new features like deleting or adding `Todo` objects, since the `TodoService` service already offers these methods as well. 
+
+=== Other projects
+
+The other projects are just containing the features and products for either EclipseLink *or* Hibernate.
 
 == Contributing
 
 Feedback is highly appreciated and pull requests are appreciated even more.
 
 So please feel free to ask for enhancements or offer pull requests for missing features.
+
 
