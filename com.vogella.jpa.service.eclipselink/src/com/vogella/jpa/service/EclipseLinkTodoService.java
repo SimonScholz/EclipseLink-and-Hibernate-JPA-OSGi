@@ -25,7 +25,7 @@ import com.vogella.jpa.model.Todo;
 import com.vogella.jpa.model.TodoService;
 
 @Component(service = TodoService.class, property = { "osgi.command.scope=test", "osgi.command.function=printTodos" })
-public class TodoServiceImpl implements TodoService {
+public class EclipseLinkTodoService implements TodoService {
 
 	private static AtomicInteger current = new AtomicInteger(1);
 	private EntityManagerFactory entityManagerFactory;
@@ -58,7 +58,7 @@ public class TodoServiceImpl implements TodoService {
 		entityManagerFactory = null;
 	}
 
-	public TodoServiceImpl() {
+	public EclipseLinkTodoService() {
 	}
 
 	@Override
